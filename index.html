@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Dokumenten Manager</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<!-- Bootstrap -->
+	<link href="dist/css/bootstrap.css" rel="stylesheet">
+	<link href="dist/css/bootstrap-theme.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="">
+		<div class="demo-mode" title="Nur Prototyp: Klicken um Demo-Leiste ausblenden">
+			<h4>DEMO-Modus</h4>
+			<p>Sie befinden sich momentan im Demo-Modus</p>
+			<a href="#" class="btn btn-warning btn-sm">Freischaltcode eingeben</a>
+			<a href="#" class="btn btn-default btn-sm hide-demo use-tooltip" title="PROTOTYPING: Klicken um Leiste auszublenden" data-toggle="tooltip" data-placement="bottom"><span class="icon glyphicon glyphicon-remove"></span></a>
+		</div>
+		<header class="clearfix">
+			<div class="container">
+				<div class="header-bar clearfix">
+					<div class="search-bar pull-left">
+						<form class="form-inline">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Suchanfrage eingeben">
+								<span class="icon glyphicon glyphicon-search"></span>
+							</div>
+						</form>
+					</div>
+					<div class="pull-right">
+						<div class="title"><span class="title-product">Das elektronische Datenschutzhandbuch</span></div>
+						<img src="img/weka-logo.png" class="logo">
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="container">
+			<nav class="navbar navbar-inverse">
+				<div class="menu">
+					<div id="navbar" class="navbar-collapse">
+						<ul class="nav navbar-nav main-menu menu">
+							<li>
+								<a href="index.html" class="menu-home menu-icon" data-toggle="tooltip" data-placement="bottom" title="Zur Produktübersicht">
+								<span class="icon glyphicon glyphicon-home"></span>
+								</a>
+							</li>
+							<!--
+								<li><a href="#" class="menu-prev"><span class="icon glyphicon glyphicon-chevron-left navbar-menu-icon"></span></a></li>
+								<li class="disabled"><a href="#" class="menu-next"><span class="icon glyphicon glyphicon-chevron-right navbar-menu-icon"></span></a></li>
+								-->
+							<li role="separator" class="divider"></li>
+							<li class="active"><a href="#">Datenschutzhandbücher</a></li>
+							<li><a href="#">Aufgaben</a></li>
+							<li><a href="#">Arbeitshilfen </a></li>
+							<li><a href="#">Vorschriften </a></li>
+							<li><a href="#">Themen A-Z </a></li>
+							<li><a href="#" class="menu-search-results">Suchergebnisse (13)</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right meta-menu menu">
+							<li role="separator" class="divider"></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Produkt wechseln <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li class="active"><a href="#">Das elektronische Datenschutzhandbuch</a></li>
+									<li><a href="#">Pflichtencheck</a></li>
+									<li role="separator" class="divider"></li>
+									<li><a href="#">Schulungsmanager</a></li>
+								</ul>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="index.html" class="menu-icon" data-toggle="tooltip" data-placement="bottom" title="Administrator-Verwaltung">
+								<span class="icon glyphicon glyphicon-cog"></span>
+								</a>
+							</li>
+							<li>
+								<a href="index.html" class="menu-icon" data-toggle="tooltip" data-placement="bottom" title="Hilfe">
+								<span class="icon glyphicon glyphicon-question-sign"></span>
+								</a>
+							</li>
+							<li>
+								<a href="index.html" class="menu-icon" data-toggle="tooltip" data-placement="bottom" title="Username1 abmelden">
+								<span class="icon glyphicon glyphicon-remove-sign"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+	
+	<div class="container page-container">
+		<div class="page">
+			<ol class="breadcrumb menu">
+				<li><a href="#">Datenschutzhandbücher</a></li>
+				<li><a href="#">Mein Unternehmen</a></li>
+				<li><a href="#">Unterpunkt 1</a></li>
+				<li class="active">Unterpunkt 2 (aktiv)</li>
+			</ol>
+			<div class="viewer">
+				<div class="col-viewer col-viewer-menu col-viewer-left hidden-xs open">
+				
+					<div class="viewer-bar clearfix">
+						<a class="button-collapse">
+						<span class="glyphicon glyphicon-menu-right icon-closed"></span>
+						<span class="glyphicon glyphicon-menu-left icon-open"></span>
+						</a>
+					</div>
+					
+					<div class="viewer-menu auto-content-height">
+						<ul class="menu tree-menu">
+							<li>
+								<a href="#">Datenschutzhandbücher</a>
+								<ul>
+									<li>
+										<a href="#"><span class="icon glyphicon glyphicon-home"></span>Mein Unternehmen</a><span class="icon-collapse-all glyphicon glyphicon-circle-arrow-down" data-toggle="tooltip" data-placement=left title="Alle Unterpunkte ausklappen"></span>
+										<ul>
+											<li>
+												<a href="#"><span class="icon glyphicon glyphicon-book"></span>Mein Datenschutzhandbuch</a><span class="icon-collapse-all glyphicon glyphicon-circle-arrow-down" data-toggle="tooltip" data-placement=left title="Alle Unterpunkte ausklappen"></span>
+												<ul>
+													<li>
+														<a href="#"><span class="icon glyphicon glyphicon-folder-open"></span>I - Basistätigkeiten</a><span class="icon-collapse-all glyphicon glyphicon-circle-arrow-down" data-toggle="tooltip" data-placement=left title="Alle Unterpunkte ausklappen"></span>
+														<ul>
+															<li>
+																<a href="#"><span class="icon glyphicon glyphicon-folder-open"></span>A - Bestellung</a>
+																<ul>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>01 - Formerfordernis</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>01 - Formerfordernis2</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>02 - Fachkunde</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>03 - Eignung</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>04 - Widerruf der Bestellung</a></li>
+																</ul>
+															</li>
+															<li>
+																<a href="#"><span class="icon glyphicon glyphicon-folder-open"></span>B - Bestandsaufnahme</a>
+																<ul>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>01 - Unternehmensorganisation</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>02 - IT-Organisation</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>03 - Risikoanalyse</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>04 - TOM: Basisprüfung</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>05 - TOM: Zutrittskontrolle</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>06 - TOM: Zugangskontrolle</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close status-3" data-toggle="tooltip" data-placement="left" title="Status 3"></span>07 - TOM: Zugriffskontrolle</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close status-1" data-toggle="tooltip" data-placement="left" title="Status 1"></span>08 - TOM: Weitergabekontrolle</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close status-1" data-toggle="tooltip" data-placement="left" title="Status 1"></span>09 - TOM: Eingabekontrolle</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close status-2" data-toggle="tooltip" data-placement="left" title="Status 2"></span>10 - TOM: Auftragskontrolle</a></li>
+																	<li>
+																		<a href="#"><span class="icon glyphicon glyphicon-folder-open"></span>11 - TOM: Verfügbarkeitskontrolle</a>
+																		<ul>
+																			<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>a - Brandschutz</a></li>
+																			<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>b - Backupkonzept</a></li>
+																		</ul>
+																	</li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>12 - TOM: Trennungskontrolle</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>13 - Löschpflichten</a></li>
+																</ul>
+															</li>
+														</ul>
+													</li>
+													<li>
+														<a href="#"><span class="icon glyphicon glyphicon-folder-open"></span>III - Spezielle Fähigkeiten<span class="icon-collapse-all glyphicon glyphicon-circle-arrow-down" data-toggle="tooltip" data-placement=left title="Alle Unterpunkte ausklappen"></span></a>
+														<ul>
+															<li>
+																<a href="#"><span class="icon glyphicon glyphicon-folder-open"></span>H - Mobile Endgeräte und Datenträger</a>
+																<ul>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>01 - Handy-Ortung</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>02 - Datenträgeraustausch</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>03 - Mobile Speichermedien</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>04 - Smartphone-Applikationen</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>05 - Mobile Cloud Computing</a></li>
+																	<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>06 - Remote Desktop</a></li>
+																	<li>
+																		<a href="#"><span class="icon glyphicon glyphicon-folder-open"></span>07 - Mobile Betriebssysteme</a>
+																		<ul>
+																			<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>a - Android</a></li>
+																			<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>b - iOS</a></li>
+																			<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>c - Windows Phone</a></li>
+																			<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>d - BlackBerry OS</a></li>
+																		</ul>
+																	</li>
+																</ul>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a href="#"><span class="icon glyphicon glyphicon-folder-open"></span>Personen</a>
+												<ul>
+													<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>Mustermann, Max</a></li>
+													<li><a href="#"><span class="icon glyphicon glyphicon-folder-close"></span>Mustermann, Max</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="col-viewer col-viewer-content content">
+				
+					<div class="viewer-bar clearfix">
+						<ul class="menu action-menu pull-right text-right">
+							<li>
+								<div class="btn-group" title="Neu anlegen in">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<span class="icon glyphicon glyphicon-file"></span>
+									<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Ebene 1</a></li>
+										<li><a href="#">Ebene 2</a></li>
+										<li><a href="#">Ebene 3</a></li>
+										<li><a href="#">Ebene 4</a></li>
+										<li><a href="#">Ebene 5</a></li>
+										<li><a href="#">Ebene 6</a></li>
+										<li><a href="#">Ebene 7</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#" class="" title="Kopieren">
+								<span class="icon glyphicon glyphicon-copy"></span>
+								</a>
+							</li>
+							<li><a href="#" class="" title="Ausschneiden">
+								<span class="icon glyphicon glyphicon-scissors"></span>
+								</a>
+							</li>
+							<li><a href="#" class="" title="Einfügen">
+								<span class="icon glyphicon glyphicon-paste"></span>
+								</a>
+							</li>
+							<li><a href="#" class="" title="Einfügen mit Struktur">
+								<span class="icon glyphicon glyphicon-paste"></span>
+								</a>
+							</li>
+							<li><a href="#" class="" title="Exportieren als PDF">
+								<span class="icon glyphicon glyphicon-level-up"></span>
+								</a>
+							</li>
+							<li><a href="#" class="" title="Exportieren als ZIP">
+								<span class="icon glyphicon glyphicon-level-up"></span>
+								</a>
+							</li>
+							<li><a href="#" class="" title="Vorschau/Drucken">
+								<span class="icon glyphicon glyphicon-print"></span>
+								</a>
+							</li>
+							<li><a href="#" class="" title="Löschen">
+								<span class="icon glyphicon glyphicon glyphicon-trash"></span>
+								</a>
+							</li>
+							<li><a href="#" class="action-hide" title="Ausblenden">
+								<span class="icon glyphicon glyphicon-eye-close"></span>
+								</a>
+							</li>
+							<li class="collapse"><a href="#" class="action-show" title="Einblenden">
+								<span class="icon glyphicon glyphicon-eye-open"></span>
+								</a>
+							</li>
+							<li><a href="#" class="" title="Muster-struktur wiederherstellen">
+								<span class="icon glyphicon glyphicon-list-alt"></span>
+								</a>
+							</li>
+							<li><a href="#" class="" title="Neue Aufgabe">
+								<span class="icon glyphicon glyphicon-plus-sign"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="viewer-content auto-content-height">
+					
+						<div class="tabs">
+						
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active">
+									<a href="#tab-content" aria-controls="tab-content" role="tab" data-toggle="tab">Content</a>
+								</li>
+								<li role="presentation">
+									<a href="#tab-form" aria-controls="tab-form" role="tab" data-toggle="tab">Formular</a>
+								</li>
+								<li role="presentation">
+									<a href="#tab-table" aria-controls="tab-table" role="tab" data-toggle="tab">Tabellen</a>
+								</li>
+								<li role="presentation">
+									<a href="#tab-stuff" aria-controls="tab-stuff" role="tab" data-toggle="tab">Sonstiges</a>
+								</li>
+							</ul>
+							
+							<!-- Tab panes -->
+							<div class="tab-content">
+							
+								<div role="tabpanel" class="tab-pane active" id="tab-content">
+									<h2>Content</h2>
+									<h3>Zusammenfassung</h3>
+									<h4>Begriff</h4>
+									<p>Unter Befüllen wird hier das Befüllen von Behältern in Anlagen zum Lagern und Abfüllen wassergefährdender flüssiger Stoffe verstanden. Danach gilt z.B. bei der Treibstoffversorgung eines Flughafens nicht nur das Befüllen der Eisenbahnkesselwagen im Raffinerietanklager, sondern auch ihr Entleeren ins Flughafentanklager als Abfüllen, da damit gleichzeitig die dortigen ortsfesten Lagertanks befüllt werden.</p>
+									<h4>Gesetze, Vorschriften und Rechtsprechung</h4>
+									<ul>
+										<li>§ 62 Abs. 4 Nr. 5 Wasserhaushaltsgesetz (WHG)</li>
+										<li>§ 3 Muster-Anlagenverordnung (Muster-VAwS)</li>
+										<li>§ 8 Muster-Anlagenverordnung (Muster-VAwS)</li>
+										<li>
+											§ 20 Muster-Anlagenverordnung (Muster-VAwS)
+											<ul>
+												<li>Unterpunkt 1</li>
+												<li>Unterpunkt 2</li>
+												<li>Unterpunkt 3</li>
+											</ul>
+										</li>
+									</ul>
+									<h2>Grundpflichten beim Befüllen nach § 20 Muster-VAwS</h2>
+									<p>Das Befüllen und Entleeren von Anlagen stellt erfahrungsgemäß eine größere Gefahrenquelle für die Gewässer dar als das eigentliche Lagern. Hauptursache ist menschliches Versagen. Das WHG verlangt deshalb von demjenigen, der eine Anlage zum Lagern wassergefährdender Stoffe befüllt oder entleert – also dem Lieferanten, dem Tankwagenfahrer und seinem Beifahrer –, dass er den Vorgang überwacht. Dazu muss er z.B. vor dem Befüllen eines Öltanks prüfen, mit wieviel Öl der Behälter befüllt werden kann. Zudem muss er sich vom ordnungsgemäßen Zustand der erforderlichen Sicherheitseinrichtungen überzeugen. Dazu gehören vor allem die in der VAwS vorgeschriebenen Überfüll- und Abfüllsicherungen.</p>
+									<ol>
+										<li>§ 62 Abs. 4 Nr. 5 Wasserhaushaltsgesetz (WHG)</li>
+										<li>§ 3 Muster-Anlagenverordnung (Muster-VAwS)</li>
+										<li>§ 8 Muster-Anlagenverordnung (Muster-VAwS)</li>
+										<li>§ 20 Muster-Anlagenverordnung (Muster-VAwS)</li>
+									</ol>
+									<p>Die Überwachungspflichten im WHG – und damit auch § 20 Muster-VAwS 1990 als Konkretisierung – spielen eine wichtige Rolle bei der zivilrechtlichen Haftung in Schadensfällen. Sie werden bei der vertraglichen und deliktischen Haftung herangezogen, um den Umfang der Sorgfaltspflicht zu ermitteln und etwaige Verstöße dagegen zu beurteilen.</p>
+								</div>
+								
+								<div role="tabpanel" class="tab-pane" id="tab-form">
+									<h2>Formular</h2>
+									<form class="form-horizontal">
+									
+										<div class="form-group">
+											<label class="col-sm-5 control-label">Nur Text</label>
+											<div class="col-sm-12">
+												<p>sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+												<ul>
+													<li>Lorem</li>
+													<li>ipsum</li>
+													<li>dolor</li>
+												</ul>
+												<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.</p>
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-sm-5 control-label">Text in Textara</label>
+											<div class="col-sm-12">
+												<textarea class="form-control" rows="8"><p>sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p><ul><li>Lorem</li><li>ipsum</li><li>dolor</li></ul><p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.</p></textarea>
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label for="input-name" class="col-sm-5 control-label">Name</label>
+											<div class="col-sm-12">
+												<input type="email" class="form-control" id="input-name" placeholder="Name">
+											</div>
+										</div>
+										
+										<div class="form-group has-feedback">
+											<label for="input-search" class="col-sm-5 control-label">Suche</label>
+											<div class="col-sm-12">
+												<input type="email" class="form-control" id="input-search" placeholder="Suchergebnis" data-toggle="modal" data-target="#popup-search">
+												<span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
+											</div>
+										</div>
+										
+										<div class="form-group has-feedback">
+											<label for="input-search" class="col-sm-5 control-label">Datum</label>
+											<div class="col-sm-12">
+												<input type="email" class="form-control use-datepicker" id="input-search" placeholder="Datum eingeben">
+												<span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
+											</div>
+										</div>
+	
+										<div class="form-group">
+											<label for="input5" class="col-sm-5 control-label">Geschütztes Feld (disabled)</label>
+											<div class="col-sm-12">
+												<input type="email" class="form-control" id="input5" value="kann nicht editiert werden - Modus" disabled="disabled">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="input10" class="col-sm-5 control-label">Bitte hier ganz frei eine Option auswählen</label>
+											<div class="col-sm-12">
+												<select class="form-control" id="input10">
+													<option>- Bitte wählen -</option>
+													<option>Option 1</option>
+													<option>Option 2</option>
+													<option>Option 3</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group has-feedback">
+											<label for="inputPassword" class="col-sm-5 control-label">Passwort</label>
+											<div class="col-sm-12">
+												<input type="password" class="form-control" id="inputPassword" placeholder="Passwort">
+												<span class="glyphicon glyphicon-lock form-control-feedback" aria-hidden="true"></span>
+											</div>
+										</div>
+										<div class="form-group has-error">
+											<label for="input-required" class="col-sm-5 control-label">Pflichtfeld *</label>
+											<div class="col-sm-12">
+												<input type="text" class="form-control" id="input-required" placeholder="Wert wird verlangt" aria-describedby="input-required-block">
+												<span id="input-required-block" class="help-block">Bitte füllen Sie hier einen entsprechenden Wert ein.</span>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="exampleInputFile" class="col-sm-5 control-label">Datei hochladen</label>
+											<div class="col-sm-12">
+												<input type="file" id="exampleInputFile">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-sm-offset-5 col-sm-12">
+												<div class="checkbox">
+													<label>
+													<input type="checkbox"> Checkbox
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-sm-offset-5 col-sm-12 text-right">
+												<button type="button" class="btn btn-default">Abbrechen</button>
+												<button type="button" class="btn btn-default btn-primary">Speichern</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								
+								<div role="tabpanel" class="tab-pane" id="tab-table">
+								
+									<h2>Statische Tabelle</h2>
+									
+									<div class="table-responsive">
+										<table class="table table-striped">
+											<thead>
+												<tr>
+													<th>Name <a href="#" class="sort-icon sort-down sorted" data-toggle="tooltip" title="Aufwärts sortieren"><span class="glyphicon glyphicon-triangle-bottom"></span></a></th>
+													<th>Tätigkeitsfeld <a href="#" class="sort-icon sort-down" data-toggle="tooltip" title="Abwärts sortieren"><span class="glyphicon glyphicon-triangle-bottom"></span></a></th>
+													<th>Ersteller <a href="#" class="sort-icon sort-down" data-toggle="tooltip" title="Abwärts sortieren"><span class="glyphicon glyphicon-triangle-bottom"></span></a></th>
+													<th>Stand <a href="#" class="sort-icon sort-down" data-toggle="tooltip" title="Abwärts sortieren"><span class="glyphicon glyphicon-triangle-bottom"></span></a></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Muster Mitarbeiterinformation Extranet</td>
+													<td>Spezielle Tätigkeiten</td>
+													<td>WEKA</td>
+													<td>01.08.12</td>
+												</tr>
+												<tr>
+													<td>Muster Risikomatrix</td>
+													<td>Basistätigkeiten</td>
+													<td>WEKA</td>
+													<td>04.10.11</td>
+												</tr>
+												<tr>
+													<td>Muster Mitarbeiterinformation Löschung Entsorgung</td>
+													<td>Spezielle Tätigkeiten</td>
+													<td>WEKA</td>
+													<td>04.10.11</td>
+												</tr>
+												<tr>
+													<td>Muster Mitarbeiterinformation Auftragsdatenverarbeitung</td>
+													<td>Spezielle Tätigkeiten</td>
+													<td>WEKA</td>
+													<td>04.10.11</td>
+												</tr>
+												<tr>
+													<td>Muster Tätigkeitsliste Ausscheiden</td>
+													<td>Spezielle Tätigkeiten</td>
+													<td>WEKA</td>
+													<td>04.10.11</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr class="table-addon">
+													<td colspan="6" class="text-right">
+														<nav class="text-center">
+															<ul class="pagination table-pagination">
+																<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+																<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+																<li><a href="#">2</a></li>
+																<li><a href="#">3</a></li>
+																<li><a href="#">4</a></li>
+																<li><a href="#">5</a></li>
+																<li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+															</ul>
+														</nav>
+													</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+									
+									<h2>Dynamische Tabelle</h2>
+									<form>
+										<div class="table-responsive">
+											<table id="table-example1" class="table table-striped">
+												<thead>
+													<tr>
+														<th scope="row">First Name</th>
+														<th>Last Name</th>
+														<th>Datei</th>
+														<th>Username</th>
+														<th></th>
+													</tr>
+													<tr class="copy-row">
+														<td><input type="text" class="form-control edit-data" value=""></td>
+														<td><input type="text" class="form-control edit-data" value=""></td>
+														<td><input type="file" class="edit-data"></td>
+														<td><input type="checkbox" class="edit-data" value="Thornton" checked=""></td>
+														<td class="text-right table-buttons">
+															<a href="#" class="btn btn-default btn-sm table-order-up"><span class="glyphicon glyphicon-arrow-up"></span></a>
+															<a href="#" class="btn btn-default btn-sm table-order-down disabled"><span class="glyphicon glyphicon-arrow-down"></span></a>
+															<a href="#" class="btn btn-default btn-sm table-delete"><span class="glyphicon glyphicon-trash"></span></a>
+															<a href="#" class="btn btn-primary btn-sm table-edit"><span class="glyphicon glyphicon-pencil"></span></a>
+														</td>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td><span class="read-data">Mark</span><input type="text" class="form-control edit-data" value="Mark"></td>
+														<td><span class="read-data">Otto</span><input type="text" class="form-control edit-data" value="Otto"></td>
+														<td><a href="top-datei-1.pdf" class="read-data">top-datei-1.pdf</a><input type="file" class="edit-data"></td>
+														<td>
+															<input type="checkbox" class="read-data" value="Thornton" checked="checked" disabled="disabled">
+															<input type="checkbox" class="edit-data" value="Thornton" checked="checked">
+														</td>
+														<td class="text-right table-buttons">
+															<a href="#" class="btn btn-default btn-sm table-order-up disabled"><span class="glyphicon glyphicon-arrow-up"></span></a>
+															<a href="#" class="btn btn-default btn-sm table-order-down"><span class="glyphicon glyphicon-arrow-down"></span></a>
+															<a href="#" class="btn btn-default btn-sm table-delete"><span class="glyphicon glyphicon-trash"></span></a>
+															<a href="#" class="btn btn-primary btn-sm table-edit"><span class="glyphicon glyphicon-pencil"></span></a>
+														</td>
+													</tr>
+													<tr>
+														<td><span class="read-data">Jacob</span><input type="text" class="form-control edit-data" value="Jacob"></td>
+														<td><span class="read-data">Thornton</span><input type="text" class="form-control edit-data" value="Thornton"></td>
+														<td><a href="top-datei-2.pdf" class="read-data">top-datei-2.pdf</a><input type="file" class="edit-data"></td>
+														<td>
+															<input type="checkbox" class="read-data" value="Thornton" checked="checked" disabled="disabled">
+															<input type="checkbox" class="edit-data" value="Thornton" checked="checked">
+														</td>
+														<td class="text-right table-buttons">
+															<a href="#" class="btn btn-default btn-sm table-order-up"><span class="glyphicon glyphicon-arrow-up"></span></a>
+															<a href="#" class="btn btn-default btn-sm table-order-down"><span class="glyphicon glyphicon-arrow-down"></span></a>
+															<a href="#" class="btn btn-default btn-sm table-delete"><span class="glyphicon glyphicon-trash"></span></a>
+															<a href="#" class="btn btn-primary btn-sm table-edit"><span class="glyphicon glyphicon-pencil"></span></a>
+														</td>
+													</tr>
+													<tr>
+														<td><span class="read-data">Larry</span><input type="text" class="form-control edit-data" value="Larry"></td>
+														<td><span class="read-data">the Bird</span><input type="text" class="form-control edit-data" value="the Bird"></td>
+														<td><a href="top-datei-3.pdf" class="read-data">top-datei-3.pdf</a><input type="file" class="edit-data"></td>
+														<td>
+															<input type="checkbox" class="read-data" value="Thornton" disabled="disabled">
+															<input type="checkbox" class="edit-data" value="Thornton">
+														</td>
+														<td class="text-right table-buttons">
+															<a href="#" class="btn btn-default btn-sm table-order-up"><span class="glyphicon glyphicon-arrow-up"></span></a>
+															<a href="#" class="btn btn-default btn-sm table-order-down disabled"><span class="glyphicon glyphicon-arrow-down"></span></a>
+															<a href="#" class="btn btn-default btn-sm table-delete"><span class="glyphicon glyphicon-trash"></span></a>
+															<a href="#" class="btn btn-primary btn-sm table-edit"><span class="glyphicon glyphicon-pencil"></span></a>
+														</td>
+													</tr>
+												</tbody>
+												<tfoot>
+													<tr class="table-addon">
+														<td colspan="6" class="text-right">
+															<a href="#" class="table-add-row" data-target="table-example1"> <span class="glyphicon glyphicon-plus"></span> Zeile hinzufügen</a> 
+														</td>
+													</tr>
+												</tfoot>
+											</table>
+										</div>
+										<div class="button-bar text-right">
+											<a class="btn btn-default">Abbrechen</a>
+											<a class="btn btn-default btn-primary">Speichern</a> 
+										</div>
+									</form>
+								</div>
+								
+								<div role="tabpanel" class="tab-pane" id="tab-stuff">
+								
+									<h2>Popups</h2>
+									
+									<button type="button" class="btn btn-success" data-toggle="modal" data-target="#popup-message1" data-backdrop="static" data-keyboard="false">
+										Mitteilung
+									</button>
+									
+									<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#popup-warning1" data-backdrop="static" data-keyboard="false">
+										Warnung (mit Abbrechen)
+									</button>
+									
+									<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#popup-error1" data-backdrop="static" data-keyboard="false">
+										Fehler
+									</button>
+									
+									<hr>
+									
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#popup-search">
+										<span class="glyphicon glyphicon-search btn-icon-left"></span> Suchen
+									</button>
+									
+									<hr>
+									
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#popup-progressbar" data-backdrop="static" data-keyboard="false">
+										Fortschrittsbalken
+									</button>
+									
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+	
+	<!-- popup modal boxes -->
+	<div class="popup-container">
+	
+		<div class="modal fade popup-success popup-center" id="popup-message1" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Mitteilung</h4>
+					</div>
+					<div class="modal-body">
+						Alles ist Gut
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary btn-success" data-dismiss="modal">OK</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade popup-warning popup-center" id="popup-warning1" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Warnung</h4>
+					</div>
+					<div class="modal-body">
+						Die Änderungen wurden nicht gespeichert, Wollen Sie tatsächlich alle Änderungen verwerfen?
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Verwerfen</button>
+						<button type="button" class="btn btn-primary btn-warning">Speichern</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade popup-danger popup-center" id="popup-error1" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Fehler</h4>
+					</div>
+					<div class="modal-body">
+						Ein Fehler ist aufgetreten
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary btn-danger" data-dismiss="modal">OK</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade" id="popup-search" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Suchen </h4>
+					</div>
+					<div class="modal-body">
+					
+						<form class="form-horizontal">
+							<div class="form-group">
+								<label for="search-input-name" class="col-sm-5 control-label">Name</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="search-input-name" placeholder="Nach Name suchen">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="search-input-firstname" class="col-sm-5 control-label">Vorname</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="search-input-firstname" placeholder="Nach Vorname suchen">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<div class="col-sm-offset-5 col-sm-8 text-right">
+									<button type="button" class="btn btn-primary">
+										<span class="glyphicon glyphicon-search"></span> Suchen
+									</button>
+								</div>
+							</div>
+						</form>
+						
+						<h3>Suchergebnisse (4)</h3>
+						
+						<form action="#input-search" class="search-popup">
+						
+							<div class="table-responsive">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>Titel <a href="#" class="sort-icon sort-down" data-toggle="tooltip" title="Abwärts sortieren"><span class="glyphicon glyphicon-triangle-bottom"></span></a></th>
+											<th>Name <a href="#" class="sort-icon sort-down sorted" data-toggle="tooltip" title="Aufwärts sortieren"><span class="glyphicon glyphicon-triangle-bottom"></span></a></th>
+											<th>Vorname <a href="#" class="sort-icon sort-down" data-toggle="tooltip" title="Abwärts sortieren"><span class="glyphicon glyphicon-triangle-bottom"></span></a></th>
+											<th>Position <a href="#" class="sort-icon sort-down" data-toggle="tooltip" title="Abwärts sortieren"><span class="glyphicon glyphicon-triangle-bottom"></span></a></th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td> <input type="hidden" name="title" value=""></td>
+											<td>Mustermann <input type="hidden" name="name" value="Mustermann"></td>
+											<td>Max <input type="hidden" name="firstname" value="Max"></td>
+											<td>Musterposition <input type="hidden" name="position" value="Musterposition"></td>
+											<td class="table-buttons">
+												<button class="btn btn-primary"><span class="glyphicon glyphicon-ok btn-icon-left"></span>Wählen</button>
+											</td>
+										</tr>
+										<tr>
+											<td>Doktor <input type="hidden" name="title" value="Doktor"></td>
+											<td>Huberer <input type="hidden" name="name" value="Huberer"></td>
+											<td>Hans <input type="hidden" name="firstname" value="Hans"></td>
+											<td>Abteilungsleiter <input type="hidden" name="position" value="Abteilungsleiter"></td>
+											<td class="table-buttons">
+												<button class="btn btn-primary"><span class="glyphicon glyphicon-ok btn-icon-left"></span>Wählen</button>
+											</td>
+										</tr>
+										<tr>
+											<td>Präsident <input type="hidden" name="title" value="Präsident"></td>
+											<td>Oswaldini <input type="hidden" name="name" value="Oswaldini"></td>
+											<td>Michaelo <input type="hidden" name="firstname" value="Michaelo"></td>
+											<td>Ganz vorne <input type="hidden" name="position" value="Ganz vorne"></td>
+											<td class="table-buttons">
+												<button class="btn btn-primary"><span class="glyphicon glyphicon-ok btn-icon-left"></span>Wählen</button>
+											</td>
+										</tr>
+										<tr>
+											<td> <input type="hidden" name="title" value=""></td>
+											<td>Meier <input type="hidden" name="name" value="Meier"></td>
+											<td>Peter <input type="hidden" name="firstname" value="Peter"></td>
+											<td>Entwickler <input type="hidden" name="position" value="Entwickler"></td>
+											<td class="table-buttons">
+												<button class="btn btn-primary"><span class="glyphicon glyphicon-ok btn-icon-left"></span>Wählen</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+						</form>
+		
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade popup-center" id="popup-progressbar" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<!-- 
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">&nbsp;</h4>
+					</div>
+					 -->
+					<div class="modal-body">
+						<h4 class="text-center">Komponente wird geladen</h4>
+						<div class="progress">
+							<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer collapse">
+						<form class="form-inline" id="set-demo-progressbar">
+						  <div class="form-group">
+						  	<input type="text" class="form-control" id="progressbar-percent" placeholder="Prozent">
+						  </div>
+						  <button type="button" class="btn btn-default">Setzen</button>
+						  
+						  <a href="#" class="btn btn-primary set-demo-progressbar-100">OK</a>
+						</form>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<!-- Bootstrap core JavaScript
+		================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="dist/js/components.js"></script>
+	<script src="dist/js/bootstrap.js"></script>
+	<script src="dist/js/main.js"></script>
+</body>
+</html>

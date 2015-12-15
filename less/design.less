@@ -1,0 +1,852 @@
+
+//###
+// general
+//###
+
+html, body {
+  height: 100%;
+}
+
+ 
+//###
+// typo
+//###
+
+p {
+  margin: 1em 0; 
+
+          hyphens: auto;
+      -ms-hyphens: auto;
+     -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+figure {
+  &.pull-left {
+    margin-right: 10px;
+  }
+}
+
+hr {
+  border-color: @gray-light;
+}
+
+
+
+//###
+// layout
+//###
+
+body {
+  background-color: @gray-light;
+  #gradient > .vertical(@start-color: @gray-lighter; @end-color: @gray-light);
+}
+
+
+
+//##
+// header
+//##
+
+header {
+  margin: 0;
+  overflow: visible;
+  .box-shadow(0 5px 5px rgba(120, 120, 120, .6));
+  #gradient > .vertical(@start-color: #fff; @end-color: @gray-lighter);
+
+  .header-bar {
+    margin-top: 10px;
+    vertical-align: middle;
+    .border-top-radius(4px);
+    #gradient > .vertical(@start-color:  lighten(@weka-main, 5%); @end-color: darken(@weka-main, 13%));
+
+    .title {
+      display: inline-block;
+      margin-right: 1ex;
+      color: #fff;
+      font-size: @font-size-large;
+    }
+
+    .icon {
+      margin: 5px;
+      color: #fff;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+  }
+
+  .search-bar {
+    margin: 15px 15px 10px;
+
+    input {
+      width: 16em !important;
+      .transition(.3s ease-in-out width);
+      
+      &.search-focus {
+      	width: 26em !important;
+      }
+    }
+  }
+}
+
+.logo {
+  display: inline-block;
+  margin: 10px 10px;
+  width: 40px;
+  border: 1px solid #fff;
+}
+
+
+
+/* header fixieren */
+
+.get-it-fixed {
+  position: fixed !important;
+  z-index: 1000;
+  top: 0;
+  width: 100%;   
+  
+  /* only for wide breakpoint */
+  @media (max-width: @screen-sm-min) {
+  	position: static !important;
+  	
+  	+.page-container {
+      margin-top: 1px;
+    }
+  }
+}
+
+ 
+/* calculate content- height */
+
+.auto-content-height {
+	overflow: auto !important;
+	overflow-y: scroll !important;
+}
+
+
+//##
+// page
+//##
+
+.page {
+  margin-bottom: 20px;
+}
+
+.page-container {
+
+  @media (max-width: @screen-sm-min) {
+    padding: 0;
+  }
+}
+
+.start-boxes {
+  margin: 0 auto;
+  width: 95%;
+}
+
+
+
+//##
+// content
+//##
+
+.content {
+  background: #FFF;
+}
+
+
+//##
+// content viewer
+//##
+
+.viewer {
+  display: table;
+  table-layout: fixed;
+  overflow: hidden;
+  width: 100%;
+
+  .box-shadow(2px 3px 4px rgba(100, 100, 100, .5));
+  .border-radius(2px);
+
+  .col-viewer {
+    display: table-cell;
+    overflow: hidden;
+    
+    vertical-align: top;
+    
+    &.col-viewer-content {
+    	
+    }
+
+	&.col-viewer-menu {
+	  width: 34px;
+	
+	  .transition(.15s ease-in-out width);
+	
+	  #gradient > .vertical(@start-color: #fff; @end-color: @weka-surface);
+	  .box-shadow(0px 8px 15px rgba(100, 100, 100, .7));
+	
+	  &.col-viewer-left {      
+	    border-right: 1px solid @gray-light;
+	      
+	    .viewer-bar .button-collapse {
+	      float: right;
+	      border-right: none;
+	    }
+	  }
+	
+	  &.col-viewer-right {
+	
+	  }
+	
+	  &.open {
+	    width: 350px;
+	    
+	    @media (max-width: @screen-md-min) {
+          width: 270px;
+        }
+	    
+	    >* { 
+	      width: 100%;
+	      /* height: auto; */
+	    }
+	
+	    >.viewer-menu {
+	      overflow: visible;
+	      height: auto;
+	      
+	      opacity: 1;
+	    }
+	      
+	    .viewer-bar {
+		    .icon-open {
+		     display: block;
+		    }
+		    .icon-closed {
+		     display: none;
+		    }
+		}
+	  }
+	
+	}
+  }
+  
+  .viewer-menu {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+	
+    opacity: .6;
+    .transition(.2s ease-in-out opacity);
+  }
+  
+  .viewer-content {
+    padding: 1.5em 3em 2em;
+
+    @media (max-width: @screen-sm-min) {
+      padding: 1em 1.5em 1.2em;
+    }
+  }
+  
+  .viewer-bar {  
+    min-height: 35px;
+    
+  	border: 1px solid @weka-surface-dark;
+  	border-right: none;
+  	border-left: none;
+    #gradient > .vertical(@start-color: #fff; @end-color: @weka-surface);
+  	
+  	.button-collapse {
+  	  display: block;
+      padding: 10px 10px;
+      height: 33px;
+      	
+      font-size: 12px;
+      text-decoration: none;
+      color: @gray;
+      cursor: pointer;
+      border-left: 1px solid @weka-surface-dark;
+      border-right: 1px solid @weka-surface-dark;
+      	
+      &:hover {
+      	background: @weka-surface;
+      }
+      
+      .icon-open {
+      	display: none;
+      }
+    }
+  }
+  
+}
+
+
+
+//###
+// design elements
+//###
+
+.icon {
+}
+
+.box {
+  margin: 10px 0;
+  padding: 10px 10px;
+  background: @brand-primary;
+  .border-radius(4px);
+  .box-shadow(3px 3px 4px rgba(100, 100, 100, .5));
+
+  .box-header {
+    padding-bottom: 5px;
+    color: #fff;
+  }
+
+  .box-content {
+    padding: 10px 10px;
+    overflow: visible;
+    border: 1px solid @gray-lighter;
+    background: #fff;
+    #gradient > .vertical(@start-color: #fff; @end-color: @weka-surface);
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  .box-footer {
+    padding: 1ex 0 0;
+    #gradient > .vertical(@start-color: @gray-light; @end-color: @weka-surface; 0%; 30%);
+  }
+
+  hr {
+    margin: 0;
+    padding: 0;
+    border-color: @weka-main;
+  }
+}
+
+//###
+// menus
+//###
+
+.menu, 
+.menu ul, .menu ol, 
+.menu li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  
+  a {
+  	text-decoration: none;
+  }
+}
+
+ul.alphabetical-menu {
+  margin: 1ex 0;
+  font-size: @font-size-small;
+  text-transform: uppercase;
+
+  a {
+    margin: 1px !important;
+    padding: .3ex 0 !important;
+    width: 1.9em;
+    height: 1.9em;
+    text-align: center;
+    vertical-align: center;
+    .border-radius(0) !important;
+  }
+
+}
+
+/* # navbar menu # */
+/*
+.navbar  {
+  margin: 0 !important;
+
+  .border-top-radius(0) !important;
+  background: red;
+  #gradient > .vertical(@start-color:  darken(@weka-main, 10%); @end-color: darken(@weka-main, 40%));
+}
+*/
+
+.navbar {
+	width: 100%;
+}
+
+ul.main-menu, 
+ul.meta-menu {
+
+  a {
+
+    &.menu-prev,
+    &.menu-next {
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+    
+    &.menu-icon {
+		padding-left: 10px;
+		padding-right: 10px;
+		
+		font-size: 15px;
+		
+		&:hover {
+			background: transparent;
+		}
+	}
+	
+	&:hover {
+		#gradient > .vertical(@start-color:  darken(@weka-main, 12%); @end-color: darken(@weka-main, 20%));
+	}
+    
+  }
+  
+  >li.divider {
+    margin: 0px 7.5px;
+    width: 1px;
+    height: @navbar-height;
+
+    border-left: 1px solid @navbar-inverse-border;
+    border-right: 1px solid @weka-main-dark;
+  }
+}
+
+ul.main-menu {
+  width: 70%;
+}
+
+ol.breadcrumb {
+  margin-bottom: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  background: transparent;
+}
+
+
+/* # action menu # */
+
+.action-menu {
+  color: @gray;
+  
+  >li {
+    float: left;
+  
+    a {
+      display: block;
+      margin: 0 .6ex;
+      padding: 7px 3px 5px 7px;
+    
+      color: @gray;
+      //color: @gray-dark;
+      vertical-align: middle;
+    
+      &:hover {
+        color: @weka-sec;
+        
+        //background-color: @weka-surface;
+        .box-shadow(inset 0 3px 4px @gray-light);
+      }
+    
+      .icon {
+        padding-right: .8ex;
+    	
+        font-size: 16px;
+      }
+     
+    } 
+    
+    
+    /* dropdown */
+    a.dropdown-toggle {   
+      padding-right: 1.5ex;
+      
+      border-right: 1px solid @weka-surface-dark;
+     
+      .icon {
+        padding: 0;
+      }
+      
+
+    }
+      
+    a.active, 
+    .open a.dropdown-toggle {
+     color: @weka-main;
+    }
+    
+  }
+}
+
+/* # tree menu # */
+
+@list-padding: 17px;
+
+.tree-menu {
+
+	li {
+		position: relative;
+		
+		>a {
+			display: block;
+			padding: 4px 10px;
+			padding-right: 5px;
+		
+			border-bottom: 1px solid  @weka-surface-dark;
+			background-color: @weka-surface;
+			
+			&:hover {
+				background-color: lighten(@weka-surface, 2%);
+			}
+			
+			.icon {
+				margin-right: 1ex;
+				
+				&.status-1 {
+					color: @brand-success;
+				}
+				&.status-2 {
+					color: @brand-warning;
+				}
+				&.status-3 {
+					color: @brand-danger;
+				}
+			}
+			
+			.icon-open, .icon-closed {
+				position: relative;
+				left: 0;
+				margin-top: 3px;
+				margin-left: 8px;
+				
+				font-size: 9px;
+				color: @gray;
+				
+				&:hover {
+					color: @gray-dark;
+				}
+			}
+			.icon-closed {
+				display: none;
+			}
+			
+		}
+		&.active > a {
+			background-color: #FFF;
+		}
+		&.collapsed {
+			>ul {
+				display: none;
+			}
+		
+			.icon-open {
+				display: none;
+			}
+			.icon-closed {
+				display: inline;
+			}
+		}
+		
+		.icon-collapse-all {
+			position: absolute;
+			right: 0;
+			margin: 4px 8px;
+			
+			cursor: pointer;
+			font-size: 15px;
+			color: @gray;
+			
+			&:hover {
+				color: @weka-sec;
+			}
+			
+			&.active {
+				display: none;
+			}
+		}
+	}
+	
+	li li a { padding-left: (@list-padding * 1); }
+	li li li a { padding-left: (@list-padding * 2); }
+	li li li li a { padding-left: (@list-padding * 3); }
+	li li li li li a { padding-left: (@list-padding * 4); }
+	li li li li li li a { padding-left: (@list-padding * 5); }
+	li li li li li li li a { padding-left: (@list-padding * 6); }
+
+}
+
+.collapse-header a {
+	display: block;
+	padding: 8px 10px;
+
+	font-weight: bold;
+	color: #FFF;
+	background-color: @weka-main;
+	#gradient > .vertical(@start-color: @weka-main; @end-color: darken(@weka-main, 12%));
+	border-bottom: 1px solid @weka-surface-dark;
+	text-decoration: none;
+	
+	&:hover {
+		#gradient > .vertical(@start-color:darken(@weka-main, 8%); @end-color: darken(@weka-main, 15%));
+	}
+}
+
+
+//###
+// helper
+//###
+
+.border-radius(@radius) {
+  .border-right-radius(@radius);
+  .border-right-radius(@radius);
+  .border-bottom-radius(@radius);
+  .border-left-radius(@radius)
+}
+
+
+//###
+// forms
+//###
+
+form .form-group p {
+	margin-top: 7px;
+	/*margin-bottom: 0;*/
+}
+
+input:focus, select:focus, textarea:focus {
+	color: @gray-darker;
+}
+
+textarea { 
+	resize:vertical; 
+}
+
+
+
+//###
+// table
+//###
+
+table {
+
+	.edit-data {
+		display: none;
+	}
+	
+	.read-data {
+		display: block;
+		margin: 0;
+	}
+	
+	th {
+		white-space: nowrap;
+	}
+	
+	tr {
+	
+		&.edit-mode {
+	
+			>td {
+				background-color: @weka-surface;
+				vertical-align: middle;
+			}
+			
+			input[type="text"], select {
+				/* margin-left: -@padding-base-horizontal; */
+			}
+		
+			.read-data {
+				display: none;
+			}
+			.edit-data {
+				display: block;
+			}
+		}
+		
+		&.table-addon {
+			td {
+				background-color: @weka-surface;
+			}
+			
+		}
+		
+		&.copy-row {
+			display: none;
+		}
+		
+		td {
+	
+			vertical-align: middle;
+		
+			&.table-buttons {
+				padding: 5px 0;
+				padding-right: @padding-base-horizontal;
+				
+				white-space: nowrap;
+				text-align: right;
+				
+				a, button {
+					margin: 0 .3ex;
+					padding: 3px 7px 3px;
+					
+					&.disabled {
+						.opacity(.2);
+					}
+				}
+			}
+		}
+	}
+	
+	.sort-icon {
+		position: relative;
+		top: 2px;
+		padding: 0 1ex;
+	
+		color: @gray-light;
+		font-size: 13px;
+		
+		&:hover {
+			color: @gray;
+		}
+		
+		&.sorted {
+			color: @weka-main;
+		}
+	}
+
+}
+
+ul.pagination.table-pagination {
+	margin: 1ex 0;
+}
+
+
+
+//##
+// demo mode
+//##
+
+.demo-mode {
+
+	text-align: center;
+	color: #FFF;
+	background-color: @brand-warning; 
+	border: 1px solid darken(@brand-warning, 15%);
+	
+	>* {
+		display: inline-block;
+		margin: 1ex 1ex;
+	}
+	
+	
+	h4 {
+		font-weight: bold;
+	}
+	
+	a.btn {
+		margin:1ex 2em0;
+	}
+}
+
+.button-bar {
+	padding: 15px 0;
+	
+	border-top: 1px solid @gray-light;
+}
+
+
+//#
+// popups
+//#
+
+.modal {
+
+	.modal-header {
+		color: #FFF;
+		font-weight: bold;
+		background-color: @weka-main;
+		
+		.border-top-radius(@border-radius-base);
+		
+		.close {
+		
+			.opacity(1);
+		
+			span {
+				color: #FFF;
+				text-shadow: 0 1px 1px @weka-main-dark;
+				font-size: 20px;
+			}
+			
+			&:hover {
+				margin-top: -1px;
+				
+				.opacity(.7);
+			
+				span {
+					text-shadow: none;
+				}
+			}
+			
+		}
+	}
+	
+	&.popup-info {
+		.modal-header {
+			background-color: @brand-info;
+		}
+	}
+	
+	&.popup-success {
+		.modal-header {
+			background-color: @brand-success;
+		}
+	}
+	
+	&.popup-warning {
+		.modal-header {
+			background-color: @brand-warning;
+		}
+	}
+	
+	&.popup-danger {
+		.modal-header {
+			background-color: @brand-danger;
+		}
+	}
+	
+	// center modals 
+	&.popup-center {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		
+		// TODO: mixin erstellen
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+	
+	&.login-modal {
+		display: block !important;
+		margin-top: 120px;
+		z-index: 0 !important;
+	}
+
+}
+
+
+//# 
+// buttons
+//#
+
+.btn span.glyphicon.btn-icon-left {
+	margin-right: 1ex;
+}
+
+// focus style, for keyboard use (tab)
+a:active, a:focus {
+	outline: none;
+}
